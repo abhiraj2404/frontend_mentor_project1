@@ -3,32 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Social links profile</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark_grey: 'hsl(0, 0%, 12%)',
+            off_black:'hsl(0, 0%, 8%)' ,
+            grey:' hsl(0, 0%, 20%)',
+            neon: ' hsl(75, 94%, 57%)',
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body{ font-family: "inter";}
   </style>
+
 </head>
-<body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class=" text-center bg-off_black text-white flex justify-center align-middle text-sm">
+  <main class="bg-dark_grey sm:w-1/4 mt-20 sm:mt-44 rounded-lg p-8 mx-3">
+    <div class="image flex justify-center py-6">
+      <img class="rounded-full w-20 h-auto" src="./assets/images/avatar-jessica.jpeg" alt="failed to load">
+    </div>
+    <div class="font-semibold">
+      <h1 class="text-2xl">Jessica Randall</h1>
+      <p class="text-neon ">London, United Kingdom</p>
+    </div>
+    <p class="my-4">"Front-end developer and avid reader"</p>
+    <div class="links font-bold">
+      <div class="box bg-grey py-3 my-4 rounded-md hover:bg-neon hover:text-black">Github</div>
+      <div class="box bg-grey py-3 my-4 rounded-md hover:bg-neon hover:text-black">Frontend Mentor</div>
+      <div class="box bg-grey py-3 my-4 rounded-md hover:bg-neon hover:text-black">LinkedIn</div>
+      <div class="box bg-grey py-3 my-4 rounded-md hover:bg-neon hover:text-black">Twitter</div>
+      <div class="box bg-grey py-3 my-4 rounded-md hover:bg-neon hover:text-black">Instagram</div>
+    </div>
+  </main>
 </body>
 </html>
